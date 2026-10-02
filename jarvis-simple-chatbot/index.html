@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="chat-app">
+
+    <!-- Top bar -->
+    <header class="header">
+      <div class="logo">J</div>
+      <div class="title">
+        <h1>Jarvis</h1>
+        <p>Your simple AI assistant</p>
+      </div>
+      <div class="header-buttons">
+        <button type="button" id="keyBtn">API Key</button>
+        <button type="button" id="newChatBtn">New Chat</button>
+      </div>
+    </header>
+
+    <!-- API key box (hidden once a key is saved) -->
+    <section class="key-box" id="keyBox" hidden>
+      <input type="password" id="keyInput" placeholder="Paste your Gemini API key here" autocomplete="off">
+      <button type="button" id="saveKeyBtn">Save</button>
+      <p id="keyMessage">Get a free key at aistudio.google.com/apikey</p>
+    </section>
+
+    <!-- Messages appear here -->
+    <main class="messages" id="messages"></main>
+
+    <!-- Message box -->
+    <form class="input-bar" id="chatForm">
+      <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off" maxlength="2000">
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
